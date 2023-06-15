@@ -153,14 +153,14 @@ def main():
     
 
    
-    performance1 = Performance(artist1, "4:00 AM", "2:00 AM", "small stage")
-     performance2 = Performance(artist2, "5:00 AM", "3:00 AM", "small stage")
+    performance1 = Performance(artist1, "4:00 AM", "2:00 ", "small stage")
+     performance2 = Performance(artist2, "5:00 AM", "3:00 ", "small stage")
     
 
   
-    print("Lineup for the African Music Festival:")
+    print("Lineup :")
     for performance in [performance1, performance2]:
-        print("*", performance.artist.name, "at", performance.start_time, "on", performance.stage.name)
+        
 
 
 
