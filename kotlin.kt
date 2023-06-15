@@ -111,9 +111,6 @@ fun main(args: Array<String>) {
     }
 fun main() {
 
-    const artist1 = new Artist("Tiwa Savage", "Nigeria",
-
-
 
     class Species(val name: String, val diet: String, val lifespan: Int, val migrationPatterns: String)
 
@@ -124,18 +121,6 @@ fun main() {
 
 
 //Question1
-    class Story(val title: String, val author: String, val length: Int, val moralLesson: String, val ageGroup: Int) {
-
-        }
-
-    class Storyteller(val name: String, val nationality: String, val genre: String) {
-
-        }
-
-    class Translator(val name: String, val nativeLanguage: String, val targetLanguage: String) {
-
-         }
-
 
 
         open class Story(
@@ -170,5 +155,18 @@ fun main() {
              }
             }
 }
+    class Story(val title: String, val author: String, val length: Int, val moralLesson: String, val ageGroup: Int) {
+
+        }
+
+    class Storyteller(val name: String, val nationality: String, val genre: String) {
+
+        }
+
+    class Translator(val name: String, val nativeLanguage: String, val targetLanguage: String) {
+
+         }
+
+
 
 

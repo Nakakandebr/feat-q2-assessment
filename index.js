@@ -1,48 +1,4 @@
 
-// Question1
-
-class Story {
-     constructor(title, text, length, moralLesson, ageGroup) {
-         this.title = title;
-         this.text = text;
-        this.length = length;
-        this.moralLesson = moralLesson;
-         this.ageGroup = ageGroup;
-     }
- }
-
-
- class Translator {
-     constructor(language) {
-        this.language = language;
-     }
-
-     translateStory(story) {
-        return new Story(
-             title=story.title,
-             text=story.text.translate(this.language),
-            length=story.length,
-             moralLesson=story.moralLesson,
-             ageGroup=story.ageGroup,
-         );
-     }
- }
- class Storyteller {
-    constructor(name, stories) {
-        this.name = name;
-        this.stories = stories;
-     }
- 
-     tellStory(story) {
-        console.log(`${this.name} is telling the story ${story.title}`);
-        console.log(story.text);
-     }
- }
-
-
-//  quetsion two
-
-
 //  Question three
 class Species {
     constructor(name, diet, lifespan, migrationPatterns) {
@@ -100,16 +56,16 @@ class Product {
         this.quantity = quantity;
     }
 
-    get totalValue() {
+    get totalAnswer() {
         return this.price * this.quantity;
     }
 }
 
-const product1 = new Product("Mangoes", 30, 4);
-const product2 = new Product("avacodo", 40, 23);
+const product1 = new Product("Mangoes", 35, 14);
+const product2 = new Product("avacodo", 40, 3);
 
-console.log(product1.totalValue()); 
-console.log(product2.totalValue()); 
+console.log(product1.totalAnswer()); 
+console.log(product2.totalAnswer()); 
 
 
 // QUESTION 6
@@ -120,12 +76,12 @@ class Student{
         this.grades = grades
     }
         
-    average_grade(){
+    gradeAverage(){
         return sum(this.grades) / len(this.grades)
     }
        
 
-    display_information(){
+    informationDisplay(){
         console.log("Name:", self.name)
         console.log("Age:", self.age)
         console.log("Grades:", self.grades)
@@ -134,7 +90,7 @@ class Student{
        
        
 
-    has_passed(){
+    passed(){
         return this.average_grade() >= 60
 
     }
@@ -194,14 +150,51 @@ class Student{
         }
     
         displayBookDetails(book) {
-            console.log("Title:", book.title);
-            console.log("Author:", book.author);
             console.log("Genre:", book.genre);
             console.log("Available copies:", book.availableCopies);
-        
-    
+            console.log("Title:", book.title);
+            console.log("Author:", book.author);
     
 
+// Question1
+
+class Story {
+    constructor(title, text, length, moralLesson, ageGroup) {
+        this.title = title;
+        this.text = text;
+       this.length = length;
+       this.moralLesson = moralLesson;
+        this.ageGroup = ageGroup;
+    }
+}
+
+
+class Translator {
+    constructor(language) {
+       this.language = language;
+    }
+
+    translateStory(story) {
+       return new Story(
+            title=story.title,
+            text=story.text.translate(this.language),
+           length=story.length,
+            moralLesson=story.moralLesson,
+            ageGroup=story.ageGroup,
+        );
+    }
+}
+class Storyteller {
+   constructor(name, stories) {
+       this.name = name;
+       this.stories = stories;
+    }
+
+    tellStory(story) {
+       console.log(`${this.name} is telling the story ${story.title}`);
+       console.log(story.text);
+    }
+}
 
 
 
