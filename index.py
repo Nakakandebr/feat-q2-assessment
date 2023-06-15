@@ -246,7 +246,7 @@ class FlightBooking:
     def passenger_infor(self, passenger):
         pass
 
-    def booking_confirmation(self, flight, passenger):
+    def confirmation_booking(self, flight, passenger):
         confirmation = {
             "flight": flight,
             "passenger": passenger,
@@ -256,18 +256,14 @@ class FlightBooking:
 
 flight_booking = FlightBooking()
 
-
 flight_booking.flights.append(Flight(destination="Uanda", date="2023/7/9"))
-
 
 
 for flight in flight_booking.search_flights("Uganda", "2023/8/20"):
     print(flight)
 
-
 passenger = Passenger("Bridget")
 flight_booking.reserve_seat(flight, passenger)
-
 
 
 
@@ -286,13 +282,13 @@ class LibraryCatalog:
         if title in self.books:
             return self.books[title]
         else:
-            return None
+            return f"not there"
 
     def get_available_copies(self, book):
         if book in self.books:
             return self.books[book].available_copies
         else:
-            return 0
+            return f"zero books"
 
     def display_book_details(self, book):
         if book in self.books:
