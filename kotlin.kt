@@ -1,4 +1,4 @@
-/G QUESTION 6
+/QUESTION 6
 class Student(val name: String, val age: Int, val grades: List<Int>) {
     fun averageGrade() = grades.average()
     fun displayInformation() {
