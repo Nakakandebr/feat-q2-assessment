@@ -21,6 +21,7 @@ class Prey extends Species {
 
 let species =  new Species ("Kangaroo", "plants", "70" )
 
+
 // Question 4
 class Artist {
     constructor(name, country, musicalStyle, instruments) {

@@ -97,7 +97,7 @@ nigerian_recipe = NigerianRecipe("Nigerian Rice", ["rice", "chicken", "tomatoes"
 # create classes to model `Species`, `Predator`, `Prey`, etc., and think about how
 # these classes might relate to each other through inheritance.
 # 
-# create classes and add the attributes
+# create classes and add the attributes and the output and process
 
 class Species:
     def __init__(self, name, diet, lifespan, migration_patterns):
@@ -142,25 +142,20 @@ class Performance:
         self.stage = stage
 
 class Stage:
-    def __init__(self, name, capacity):
+    def __init__(self, name, capacityOfPeople):
         self.name = name
-        self.capacity = capacity
+        self.capacity = capacityOfPeople
 
 def main():
    
-    artist1 = Artist("Kenzo", "Uganda", "baxlagaer", ["guitar", "drums"])
-    artist2 = Artist("Rema", "Uganda", "afro", ["piano", "guitors"])
+    musician1 = Artist("Kenzo", "Uganda", "baxlagaer", ["guitar", "drums"])
+    muscian2 = Artist("Rema", "Uganda", "afro", ["piano", "guitors"])
+
+    
     
 
-   
-    performance1 = Performance(artist1, "4:00 AM", "2:00 ", "small stage")
-     performance2 = Performance(artist2, "5:00 AM", "3:00 ", "small stage")
-    
 
-  
-    print("Lineup :")
-    for performance in [performance1, performance2]:
-        
+
 
 
 
@@ -174,16 +169,16 @@ class Product:
         self.price = price
         self.quantity = quantity
 
-    def total_value(self):
+    def total(self):
         return self.price * self.quantity
 
 
 product1 = Product("Apple", 10, 2)
 product2 = Product("Banana", 5, 3)
 
-print(product1.total_value())
+print(product1.total())
 
-print(product2.total_value())
+print(product2.total())
 #  QUESTION SIX
 # 6. Implement a class called Student with attributes for name, age, and grades (a
 # list of integers). Include methods to calculate the average grade, display the
@@ -211,10 +206,7 @@ class Student:
 
 
 student1 = Student("Bridget", 18, [80, 85, 100])
-
-
 print(student1.average_grade())
-
 
 student1.display_information()
 print(student1.has_passed())
@@ -236,7 +228,7 @@ class FlightBooking:
     def getflights(self, destination, date):
         for flight in self.flights:
             if flight.destination == destination and flight.date == date:
-                yield flight
+                get flight
 
     def reserved(self, flight, passenger):
         if flight.available_seats > 0:
@@ -257,7 +249,6 @@ class FlightBooking:
 flight_booking = FlightBooking()
 
 flight_booking.flights.append(Flight(destination="Uanda", date="2023/7/9"))
-
 
 for flight in flight_booking.search_flights("Uganda", "2023/8/20"):
     print(flight)
@@ -297,20 +288,17 @@ class LibraryCatalog:
             print(f"Title: {book.title}")
             print(f"Author: {book.author}")
         else:
-            print("Book not there")
+            print("Book in the library")
 
 
-library_catalog = LibraryCatalog()
+library = LiCatalog()
 
 
 book = Book("Trvor Noah", "Trevor", "Love", 1990)
-library_catalog.add_book(book)
+library.add_new_book(book)
 
-found_book = library_catalog.search_book("Trvor Noah")
+foundbk = library_catalog.search_book("Trvor Noah")
 
-available_copies = library_catalog.get_available_copies(found_book)
-
-library_catalog.display_book_details(found_book)
 
 
 

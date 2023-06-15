@@ -9,8 +9,8 @@ class Student(val name: String, val age: Int, val grades: List<Int>) {
     fun hasPassed() = averageGrade() >= 60
 }
 
-val student1 = Student("John Doe", 18, listOf(90, 95, 100))
-val student2 = Student("Jane Doe", 17, listOf(80, 85, 90))
+val student1 = Student("BRidget, 40, listOf(80, 85, 100))
+val student2 = Student("BRidget,", 52, listOf(80, 85, 100))
 
 
 //Question5
@@ -30,7 +30,7 @@ class FlightBooking
     val passengers = mutableListOf<Passenger>()
 
     fun searchFlights(destination: String, date: String): Sequence<Flight> {
-        return flights.filter { it.destination == destination && it.date == date }
+        return flights.filter { it.destination === destination && it.date === date }
     }
 
     fun reserveSeat(flight: Flight, passenger: Passenger) {
@@ -51,8 +51,6 @@ class FlightBooking
         )
     }
 }
-
-
 
 
 
@@ -87,25 +85,19 @@ class LibraryCatalog {
 
 
 
-class Artist(val name: String, val country: String, val musicalStyle: String, val instruments: List<String>)
-
-class Performance(val artist: Artist, val startTime: String, val endTime: String, val stage: Stage)
-
-class Stage(val name: String, val capacity: Int)
-
 fun main(args: Array<String>) {
 
-    val artist1 = Artist("Tiwa Savage", "Nigeria", "Afrobeats", listOf("guitar", "drums"))
-     val artist2 = Artist("Fally Ipupa", "DRC", "Rumba", listOf("bass", "piano"))
-    val artist3 = Artist("Angelique Kidjo", "Benin", "World Music", listOf("vocals", "percussion"))
+    val artist1 = Artist("Kenzo", "Uganda", "Afrobeats", listOf("guitar", "drums"))
+     val artist2 = Artist("Rema", "Uganda", "Regga", listOf("guitar", "drums"))
+  
 
 
-     val performance1 = Performance(artist1, "10:00 AM", "11:00 AM", Stage("Main Stage", 1000))
-    val performance2 = Performance(artist2, "11:30 AM", "12:30 PM", Stage("Second Stage", 500))
+     val performance1 = Performance(artist1, "20:00 pm", "1:00 pm", Stage("small stage", 2000))
+    val performance2 = Performance(artist2, "1:30 pm", "12:00pm", Stage("Semi stage", 300))
 
 
-    println("Lineup for the African Music Festival:")
-    for (performance in listOf(performance1, performance2, performance3)) {
+    println("Lineu:")
+    for (performance in listOf(performance1, performance2, )) {
         println("* ${performance.artist.name} at ${performance.startTime} on ${performance.stage.name}")
         }
     }
@@ -123,27 +115,22 @@ fun main() {
 //Question1
 
 
-        open class Story(
-            val title: String,
-            val text: String,
-            val length: Int,
-             val moralLesson: String,
-             val ageGroup: String,
-            )
+        open class Story(val title: String,val text: String, val length: Int,  val moralLesson: String, val ageGroup: String){
 
-        class Storyteller(
-             val name: String,
-             val stories: List<Story>,
-            ) {
+        }
+            
+            
+
+        class Storyteller(val name: String,val stories: List<Story>){
             fun tellStory(story: Story) {
                  println("${this.name} is telling the story ${story.title}")
                 println(story.text)
                 }
              }
 
-         class Translator(
-             val language: String,
-            ) {
+         class Translator( val language: String){
+            
+ 
              fun translateStory(story: Story): Story {
                  return Story(
                      title=story.title,
@@ -155,17 +142,6 @@ fun main() {
              }
             }
 }
-    class Story(val title: String, val author: String, val length: Int, val moralLesson: String, val ageGroup: Int) {
-
-        }
-
-    class Storyteller(val name: String, val nationality: String, val genre: String) {
-
-        }
-
-    class Translator(val name: String, val nativeLanguage: String, val targetLanguage: String) {
-
-         }
 
 
 
