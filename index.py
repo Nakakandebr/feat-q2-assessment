@@ -7,7 +7,7 @@
 # stories or storytellers.  do it in python , kotlin and javascript use classes and inheritance
 #  Use inheritance   make sure you run it
 # attributes length , moral lessons,age group 
-
+# create classes and add the attributes
 
 class Story:
     def __init__(self, title, text, length, moral_lesson, age_group):
@@ -97,7 +97,7 @@ nigerian_recipe = NigerianRecipe("Nigerian Rice", ["rice", "chicken", "tomatoes"
 # create classes to model `Species`, `Predator`, `Prey`, etc., and think about how
 # these classes might relate to each other through inheritance.
 # 
-
+# create classes and add the attributes
 
 class Species:
     def __init__(self, name, diet, lifespan, migration_patterns):
@@ -125,7 +125,7 @@ species = Species("zebra" , "plants", 40, "Tsavo")
 # you might model the `Artist`, `Performance`, and `Stage` classes, and consider
 # how you might use inheritance if there are different types of performances or
 # stages. 
-
+# create classes and add the attributes
 
 class Artist:
     def __init__(self, name, country, musical_style, instruments):
@@ -167,7 +167,7 @@ def main():
 # 5. Create a class called Product with attributes for name, price, and quantity.
 # Implement a method to calculate the total value of the product (price * quantity).
 # Create multiple objects of the Product class and calculate their total values. Do this in python ,kotlin and javascript and make sute it runs
-
+# create classes and add the attributes
 class Product:
     def __init__(self, name, price, quantity):
         self.name = name
@@ -189,7 +189,7 @@ print(product2.total_value())
 # list of integers). Include methods to calculate the average grade, display the
 # student information, and determine if the student has passed (average grade >=
 # 60). Create objects for the Student class and demonstrate the usage of these
-# DO IT PYTHON , KOTLIN AND JAVASCRIPT AND MAKE SURE IT RUNS
+# create classes and add the attributes
 
 
 class Student:
@@ -225,7 +225,7 @@ print(student1.has_passed())
 # methods to search for available flights based on destination and date, reserve
 # seats for customers, manage passenger information, and generate booking
 # confirmations. 
-
+# create classes and add the attributes
 
 class FlightBooking:
 
@@ -257,19 +257,16 @@ class FlightBooking:
 flight_booking = FlightBooking()
 
 
-flight_booking.flights.append(Flight(destination="Uanda", date="2023-06-15"))
-flight_booking.flights.append(Flight(destination="Kenya", date="2023-06-16"))
+flight_booking.flights.append(Flight(destination="Uanda", date="2023/7/9"))
 
 
-for flight in flight_booking.search_flights("Uganda", "2023-06-15"):
+
+for flight in flight_booking.search_flights("Uganda", "2023/8/20"):
     print(flight)
 
 
 passenger = Passenger("Bridget")
 flight_booking.reserve_seat(flight, passenger)
-
-booking_confirmation = flight_booking.generate_booking_confirmation(flight, passenger)
-print(booking_confirmation)
 
 
 
