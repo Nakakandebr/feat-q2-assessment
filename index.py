@@ -107,7 +107,7 @@ class Species:
         self.migration_patterns = migration_patterns
 
 
-class Predator:
+class Predator():
     def __init__(self, name, diet, lifespan, migration_patterns):
         super().__init__(name, diet, lifespan, migration_patterns)
 
@@ -190,7 +190,7 @@ print(product2.total_value())
 # student information, and determine if the student has passed (average grade >=
 # 60). Create objects for the Student class and demonstrate the usage of these
 # create classes and add the attributes
-
+ 
 
 class Student:
     def __init__(self, name, age, grades):
